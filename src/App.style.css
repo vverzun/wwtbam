@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import '../node_modules/modern-normalize/modern-normalize.css';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; 
+
+  --color-orange-120: #E87928;
+  --color-orange-100: #FF8B37;
+  --color-orange-80: #FFAC70;
+  --color-orange-5: #FFF3EB;
+  --color-white-100: #FFFFFF;
+  --color-black-100: #1C1C21;
+}
+
+body, #root {
+  min-width: 100svw;
+  min-height: 100svh;
+  display: flex;
+}
