@@ -14,6 +14,7 @@ const helper = {
   },
   // [NOTE]: There should be a more elegant
   //         way to handle this logic
+  //
   getAnswerVariant(
     answer: Answer,
     selectedAnswer: Answer | null,

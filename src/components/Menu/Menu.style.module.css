@@ -1,0 +1,38 @@
+.container {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px 0px 32px 0px;
+  background-color: var(--color-black-5);
+}
+
+.icon {
+  display: flex;
+  align-self: flex-end;
+  margin-right: 16px;
+}
+
+.visible {
+  visibility: visible;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    visibility: visible;
+    position: static;
+    justify-content: center;
+    padding: 0px;
+    background-color: var(--color-white-100);
+  }
+
+  .icon {
+    display: none;
+  }
+}
