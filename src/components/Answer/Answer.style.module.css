@@ -28,7 +28,7 @@
 }
 
 @media (hover: hover) {
-  .container:hover svg {
+  .container:not([disabled]):hover svg {
     stroke: var(--color-orange-100);
   }
 }
