@@ -1,8 +1,23 @@
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { useTSelector } from '@hooks';
+import { Start } from '@pages';
+import { persistor, quizSelector, store } from '@store';
 import './App.style.css';
 
 function App() {
+  const status = useTSelector(quizSelector.selectStatus);
+
   return (
-    <div />
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        {{
+          'not-started': <Start />,
+          'in-progress': <div />,
+          finished: <div />,
+        }[status]}
+      </PersistGate>
+    </Provider>
   );
 }
 
