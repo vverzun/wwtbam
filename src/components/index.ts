@@ -4,3 +4,4 @@ export * from './BisectedHexagon';
 export * from './Button';
 export * from './Question';
 export * from './StageIndicator';
+export * from './StageIndicatorList';
