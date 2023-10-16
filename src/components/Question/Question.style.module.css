@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0px 24px 0px;
+  background-color: var(--color-black-5);
+}
+
+.icon {
+  display: flex;
+  align-self: flex-end;
+  margin-right: 16px;
+}
+
+.text {
+  max-width: 440px;
+  padding: 0px 16px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-black-100);
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    align-items: flex-start;
+    padding: 133px 80px 122px 80px;
+    background-color: var(--color-black-5);
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .text {
+    max-width: 640px;
+    padding: 0px;
+    font-size: 32px;
+    text-align: left;
+  }
+}
