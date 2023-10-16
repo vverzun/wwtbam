@@ -26,7 +26,7 @@ const quizSlice = createSlice({
 
       return ({
         ...state,
-        prize: state.prize + currentStagePrize,
+        prize: currentStagePrize,
       });
     },
     proceedToNextStage: (state) => {
