@@ -2,11 +2,12 @@ import ThumbsUpIcon from '@assets/thumbs-up.svg';
 import { Button } from '@components';
 import { formatter } from '@helpers';
 import { useTDispatch, useTSelector } from '@hooks';
-import { quizSelector, quizSlice } from '@store';
+import { quizSlice } from '@store';
 import style from './Result.style.module.css';
 
 function Result() {
-  const prize = useTSelector(quizSelector.selectPrize);
+  const prize = useTSelector((state) => state.quiz.prize);
+
   const dispatch = useTDispatch();
 
   const handleTryAgainButtonClick = () => {

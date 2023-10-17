@@ -1,12 +1,11 @@
 import { useTSelector } from '@hooks';
-import { quizSelector } from '@store';
 import { StageIndicator } from '../StageIndicator';
 import style from './StageIndicatorList.style.module.css';
 import helper from './StageIndicatorList.helper';
 
 function StageIndicatorList() {
-  const stages = useTSelector(quizSelector.selectStages);
-  const currentStageIndex = useTSelector(quizSelector.selectCurrentStageIndex);
+  const stages = useTSelector((state) => state.quiz.stages);
+  const currentStageIndex = useTSelector((state) => state.quiz.currentStageIndex);
 
   return (
     <ul className={style.container}>

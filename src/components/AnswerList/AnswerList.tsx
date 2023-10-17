@@ -6,7 +6,9 @@ import helper from './AnswerList.helper';
 import style from './AnswerList.style.module.css';
 
 function AnswerList() {
-  const question = useTSelector(quizSelector.selectQuestion);
+  const answers = useTSelector((state) => (
+    quizSelector.selectQuestion(state)?.answers ?? null
+  ));
 
   const {
     selectedAnswer,
@@ -16,7 +18,7 @@ function AnswerList() {
 
   return (
     <ol className={style.container}>
-      {question?.answers.map((answer, answerIndex) => (
+      {answers?.map((answer, answerIndex) => (
         <Answer
           key={answer.text}
           variant={helper.getAnswerVariant(answer, selectedAnswer, isSelectedAnswerAccepted)}

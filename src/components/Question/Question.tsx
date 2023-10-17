@@ -6,7 +6,9 @@ import { QuestionProps } from './Question.type';
 import style from './Question.style.module.css';
 
 function Question({ onMenuIconClick }: QuestionProps) {
-  const question = useTSelector(quizSelector.selectQuestion);
+  const title = useTSelector((state) => (
+    quizSelector.selectQuestion(state)?.title ?? null
+  ));
 
   return (
     <main className={style.container}>
@@ -18,7 +20,7 @@ function Question({ onMenuIconClick }: QuestionProps) {
         <img src={MenuIcon} alt="Menu" />
       </button>
       <h3 className={style.text}>
-        {question?.title}
+        {title}
       </h3>
       <AnswerList />
     </main>
